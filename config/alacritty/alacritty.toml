@@ -1,0 +1,35 @@
+[general]
+    # import = ["/Users/yyovkov/.config/alacritty/themes/github_dark.toml"]
+    import = ["/Users/yyovkov/.config/alacritty/themes/ghosty_default_style_dark.toml"]
+    working_directory = "/Users/yyovkov/Projects/Triple/triple"
+
+[font]
+    size = 15.0
+
+[font.normal]
+    # family = "SF Mono Powerline"
+    family = "SauceCodePro Nerd Font Mono"
+    style  = "Regular"
+
+[scrolling]
+    history = 100000
+
+[window]
+    decorations = "Transparent"
+    padding = { x = 0, y = 24 }
+    dynamic_padding = true
+    title = "Alacritty"
+
+[keyboard]
+    bindings = [
+        { key = "F", mods = "Command", action = "ScrollPageUp" },
+        { key = "B", mods = "Command", action = "ScrollPageDown" },
+        { key = "F", mods = "Command", mode = "~Search", action = "none" },
+        { key = "B", mods = "Command", mode = "~Search", action = "none" },
+        { key = "T", mods = "Command", action = "none" },
+    ]
+
+# [[keyboard.bindings]]
+# key = "Return"
+# mods = "Shift"
+# chars = "\u001B\r"

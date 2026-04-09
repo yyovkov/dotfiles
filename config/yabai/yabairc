@@ -1,0 +1,12 @@
+# Set bottom padding
+yabai -m config bottom_padding 1
+
+# Disable all app by default
+yabai -m rule --add app=".*" manage=off 
+
+#===============================================================================
+# Yabai Cheat Sheet
+#===============================================================================
+## Restart Yabai Service
+# $ yabai --stop-service
+# $ yabai --start-service

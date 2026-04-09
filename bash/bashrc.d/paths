@@ -1,0 +1,14 @@
+#===============================================================================
+# Suplementary paths
+#===============================================================================
+export PATH
+
+# Setup homebrew path
+PATH_HOMEBREW="/opt/homebrew/bin"
+[ -d $PATH_HOMEBREW ]  && PATH=/opt/homebrew/bin:${PATH}
+
+# Added by LM Studio CLI (lms)
+PATH="$PATH:/${HOOME}/.cache/lm-studio/bin"
+
+# Add mysql-client to PATH
+PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
