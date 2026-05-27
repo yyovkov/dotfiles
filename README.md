@@ -12,7 +12,7 @@ Any feedback is welcome!
 For now the script is tested only on Ubuntu 24.04
 
 ``` bash
-curl -s https://raw.githubusercontent.com/yyovkov/dot-files/refs/heads/master/_scripts/install_dotfiles.sh | bash -
+curl -s https://raw.githubusercontent.com/yyovkov/dotfiles/refs/heads/master/_scripts/install_dotfiles.sh | bash -
 ```
 
 ## Required brew packages

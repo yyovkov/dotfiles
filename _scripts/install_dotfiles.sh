@@ -2,17 +2,15 @@
 
 ## Variables
 BRANCH_NAME="master"
-GITHUB_REPO_URL="https://raw.githubusercontent.com/yyovkov/dot-files/refs/heads/${BRANCH_NAME}/"
+GITHUB_REPO_URL="https://raw.githubusercontent.com/yyovkov/dotfiles/refs/heads/${BRANCH_NAME}/"
 
 ## Global Functions
-_die()
-{
+_die() {
   echo -e "ERROR: ${@}" >&2
   exit 1
 }
 
-_info()
-{
+_info() {
   echo -e "INFO: ${@}"
 }
 
@@ -36,7 +34,6 @@ mkdir -p $(dirname "${LOCAL_USER_LOCATION_TMUXCONF}")
 _info "Download and install TMUX configuration directory"
 curl -sLo "${LOCAL_USER_LOCATION_TMUXCONF}" "${GITHUB_REPO_URL}/${GITHUB_LOCATION_TMUXCONF}"
 
-
 ################################################################################
 # Install vimrc file
 ################################################################################
@@ -48,7 +45,6 @@ mkdir -p $(dirname "${LOCAL_USER_LOCATION_VIMRC}")
 
 _info "Download and install VIMRC configuration directory"
 curl -sLo "${LOCAL_USER_LOCATION_VIMRC}" "${GITHUB_REPO_URL}/${GITHUB_LOCATION_VIMRC}"
-
 
 ################################################################################
 # Bash profile
@@ -62,7 +58,6 @@ mkdir -p $(dirname "${LOCAL_USER_LOCATION_BASHPROFILE}")
 _info "Download and install BASHPROFILE configuration directory"
 curl -sLo "${LOCAL_USER_LOCATION_BASHPROFILE}" "${GITHUB_REPO_URL}/${GITHUB_LOCATION_BASHPROFILE}"
 
-
 ################################################################################
 # Bash prompt
 ################################################################################
@@ -75,7 +70,6 @@ mkdir -p $(dirname "${LOCAL_USER_LOCATION_BASHPROMPT}")
 _info "Download and install BASHPROMPT configuration directory"
 curl -sLo "${LOCAL_USER_LOCATION_BASHPROMPT}" "${GITHUB_REPO_URL}/${GITHUB_LOCATION_BASHPROMPT}"
 
-
 ################################################################################
 # Bash vim motion
 ################################################################################
@@ -87,7 +81,6 @@ mkdir -p $(dirname "${LOCAL_USER_LOCATION_BASHVIMMOTION}")
 
 _info "Download and install BASHVIMMOTION configuration directory"
 curl -sLo "${LOCAL_USER_LOCATION_BASHVIMMOTION}" "${GITHUB_REPO_URL}/${GITHUB_LOCATION_BASHVIMMOTION}"
-
 
 ################################################################################
 # Python
