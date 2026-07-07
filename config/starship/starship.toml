@@ -9,8 +9,11 @@ $git_branch\
 $git_status\
 $git_state\
 $terraform\
+$python\
 $golang\
-$nodejs
+$nodejs\
+$fill\
+$time
 $character"""
 
 [character]
@@ -25,7 +28,7 @@ before_repo_root_style = 'bold red'
 repo_root_style = 'bold green'
 
 [fill]
-symbol = '.'
+symbol = ' '
 style = 'bold blue'
 
 [git_branch]
@@ -34,7 +37,8 @@ symbol = ''
 format = ' [$symbol $branch]($style)'
 
 [git_status]
-format = '([\[($modified)( $untracked)\]]($style) )'
+# format = '([\[($modified)( $untracked)\]]($style) )'
+format = '([\[($modified)($untracked)\]]($style))'
 style = 'bold purple'
 behind = '󰁮'
 modified = "[](bold red)"
@@ -50,11 +54,16 @@ format = ' [$symbol ($version)]($style)'
 
 [time]
 disabled = false
+style = 'yellow'
 format = '[ $time ]($style)'
 time_format = '%T'
 
 [nodejs]
 format = '[$symbol($version)]($style)'
+
+[python]
+symbol = '🐍'
+format = ' [${symbol} ${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 
 [terraform]
 symbol = '󱁢'
