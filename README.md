@@ -80,3 +80,10 @@ cp vscode/keybindings.json "$HOME/Library/Application Support/Code/User/keybindi
 mkdir -p ~/.vim
 cp vim/vimrc ~/.vim/vimrc
 ```
+
+## Setup brew
+
+``` bash
+cp Brewfile ~/.Brewfile
+```
+
