@@ -1,0 +1,22 @@
+\set help             '\\i ~/.config/psql/aliases/admin/admin.help'
+\set aliases          '\\i ~/.psqlrc'
+\set settings         'SELECT name, setting,unit,context FROM pg_settings'
+\set locks            `cat ~/.config/psql/aliases/admin/locks.sql`
+\set conninfo         'SELECT usename, count(*) FROM pg_stat_activity GROUP BY usename;'
+\set activity         `cat ~/.config/psql/aliases/admin/activity.sql`
+\set waits            `cat ~/.config/psql/aliases/admin/waits.sql`
+\set autovac_runtime  `cat ~/.config/psql/aliases/admin/autovac_runtime.sql`
+\set last_vacuum      `cat ~/.config/psql/aliases/admin/last_vacuum_analyze.sql`
+\set vac_ready        `cat ~/.config/psql/aliases/admin/vac_ready.sql`
+\set largest_objects  `cat ~/.config/psql/aliases/admin/largest_objects.sql`
+\set dbsize           `cat ~/.config/psql/aliases/admin/dbsize.sql`
+\set tablesize        `cat ~/.config/psql/aliases/admin/tablesize.sql`
+\set uselesscol       `cat ~/.config/psql/aliases/admin/uselesscol.sql`
+-- rtsize and tsize source: https://gist.github.com/pivaldi/4054440
+\set rtsize           `cat ~/.config/psql/aliases/admin/rtsize.sql`
+\set tsize            `cat ~/.config/psql/aliases/admin/tsize.sql`
+\set uptime           'SELECT now() - pg_postmaster_start_time() AS uptime;'
+\set sp               'SHOW search_path;'
+\set enums            `cat ~/.config/psql/aliases/admin/enums.sql`
+\set clear            '\\! clear;'
+\set ll               '\\! ls -lrt;'

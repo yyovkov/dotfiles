@@ -1,0 +1,35 @@
+-- Prevent noisy loading of psqlrc file
+\set QUIET yes
+
+--host/db specific history files
+\set HISTFILE ~/.psql_history- :HOST - :DBNAME
+
+-- Show timing info for queries
+\timing on
+
+-- Disable pager
+\pset pager off
+
+-- Allow pasting of values to avoid stupid indenting
+\set paste
+
+-- Get rid of duplicates in history
+\set HISTCONTROL ignoredups
+
+-- Protect against results floods
+\set FETCH_COUNT 1000
+
+-- Automatically upcase keywords (works only intermittently)
+\set COMP_KEYWORD_CASE upper
+
+-- Show NULLs as: [NULL]
+\pset null '[NULL]'
+
+-- Set noisyness back to normal
+\unset QUIET
+
+-- How to add multiline aliases:
+-- \set some_alias `cat ~/.psqlrc-aliases/some_client/some_alias.sql`
+
+-- Useful only in interactive mode. Add custom alias sets below.
+\ir ~/.config/psql/aliases/admin/psqlrc
