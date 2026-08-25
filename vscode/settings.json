@@ -1,16 +1,13 @@
 {
     "workbench.startupEditor": "none",
-    "workbench.fontAliasing": "antialiased",
     "workbench.colorCustomizations": {
-
         "peekView.border": "#50A69B",
         "peekViewTitle.background": "#002b36",
         "peekViewResult.background": "#00212b",
         "peekViewEditor.background": "#002b36",
         "peekViewEditor.matchHighlightBackground": "#00212bAB",
     },
-    "explorer.openEditors.visible": 0,
-    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvironment": false,
     "extensions.ignoreRecommendations": true,
     "editor.wordWrap": "on",
     "editor.rulers": [80, 120],
@@ -31,9 +28,7 @@
         "**/CVS": true
     },
     "editor.minimap.enabled": false,
-    "editor.lineNumbersMinChars": 1,
     "editor.glyphMargin": false,
-    // "editor.folding": false,
     // Per Filetype Tab Size
     "[html]": {
         "editor.tabSize": 2
@@ -99,15 +94,45 @@
     "files.associations": {
         "*.mkt": "rosScript",
         "*.ks": "properties",
-        "*.html": "html"
+        "*.html": "html",
+        "*.tmpl": "html"
     },
-    "terminal.integrated.defaultProfile.osx": "bash",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontFamily": "SauceCodePro Nerd Font Mono",
+    "terminal.integrated.fontWeight": "normal",
+    "terminal.integrated.defaultProfile.osx": "bash (2)",
     "terminal.integrated.profiles.osx": {
+        "bash": {
+            "path": "bash",
+            "args": [
+                "-l"
+            ],
+            "icon": "terminal-bash"
+        },
         "zsh": {
-            "path": "/usr/loca/bin/bash"
+            "path": "/usr/loca/bin/bash",
+            "args": [
+                "-l"
+            ]
+        },
+        "fish": {
+            "path": "fish",
+            "args": [
+                "-l"
+            ]
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        },
+        "bash (2)": {
+            "path": "/opt/homebrew/bin/bash"
         }
     },
-    "javascript.updateImportsOnFileMove.enabled": "always",
     "go.formatTool": "goimports",
     "vim.handleKeys": {
         "<C-a>": false,
@@ -115,28 +140,20 @@
         "<C-c>": false,
         "<C-v>": false
     },
-    "material-icon-theme.folders.color": "#26a69a",
+    "material-icon-theme.folders.color": "#42a5f5",
     "material-icon-theme.folders.theme": "classic",
     "python.terminal.activateEnvInCurrentTerminal": true,
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "python.languageServer": "Pylance",
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
-    },
     "go.toolsManagement.autoUpdate": true,
     "vsicons.dontShowNewVersionMessage": true,
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
     "[go]": {
 
         "editor.tabSize": 2,
         "editor.insertSpaces": false,
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": false
+            "source.organizeImports": "never"
         },
         "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.defaultFormatter": "golang.go"
@@ -144,44 +161,65 @@
     "security.workspace.trust.untrustedFiles": "open",
     "redhat.telemetry.enabled": false,
     "files.insertFinalNewline": true,
-    "print.alternateBrowser": false,
     "settingsSync.ignoredExtensions": [
         "shan.code-settings-sync"
     ],
-    "sync.syncExtensions": true,
-    "sync.gist": "f20fd3a609378a9ded92da9063588d98",
-    "editor.fontFamily": "'Source Code Pro',   Monaco, 'Courier New', 'Roboto Mono Thin for Powerline'",
-    "terminal.integrated.fontSize": 14,
     "go.enableCodeLens": {
         "runtest": false
     },
     "go.editorContextMenuCommands": {},
-    "breadcrumbs.enabled": false,
     "window.autoDetectColorScheme": true,
     "python.defaultInterpreterPath": "python3",
-    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.acceptSuggestionOnEnter": "off",
     "python.venvPath": "${workspaceFolder}/.venv",
-    // "settingsSync.ignoredSettings": [
-    //     "-python.venvPath"
-    // ],
     "editor.largeFileOptimizations": false,
     "git.openRepositoryInParentFolders": "always",
-    "workbench.preferredLightColorTheme": "GitHub Light",
-    "workbench.iconTheme": "vscode-great-icons",
-    "terminal.integrated.fontFamily": "SF Mono Powerline",
+    "workbench.iconTheme": "material-icon-theme",
     "editor.autoClosingQuotes": "never",
     "editor.accessibilitySupport": "off",
     "vim.cursorStylePerMode.insert": "line",
     "vim.cursorStylePerMode.replace": "block-outline",
-    "vim.startInInsertMode": true,
-    // "gopls": {
-    //     "build.experimentalWorkspaceModule": true
-    // }
+    "vim.startInInsertMode": false,
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
     },
     "workbench.editor.empty.hint": "hidden",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "typescript.preferences.quoteStyle": "single",
+    "editor.defaultFormatter": "redhat.ansible",
+    "js/ts.preferences.quoteStyle": "single",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.donotVerifyTags": true,
+    "editor.stickyScroll.enabled": false,
+    "editor.stickyScroll.scrollWithEditor": false,
     "workbench.activityBar.location": "hidden",
+    "settingsSync.ignoredSettings": [
+        "-python.venvPath"
+    ],
+    "terminal.integrated.hideOnStartup": "always",
+    "workbench.layoutControl.enabled": false,
+    "window.commandCenter": false,
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "material-icon-theme.rootFolders.color": "#90a4ae",
+    "material-icon-theme.activeIconPack": "angular",
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "editor.fontFamily": "Source Code Pro for Powerline",
+    "chat.viewSessions.orientation": "stacked",
+    "ansible.lightspeed.enabled": false,
+    "ansible.lightspeed.suggestions.enabled": false,
+    "editor.defaultFoldingRangeProvider": "redhat.ansible",
+    "notebook.defaultFormatter": "redhat.ansible",
+    "[ansible]": {
+        "editor.defaultFormatter": null
+    },
+    "workbench.colorTheme": "Visual Studio Light",
+    "workbench.preferredDarkColorTheme": "Visual Studio Dark - C++",
 }
