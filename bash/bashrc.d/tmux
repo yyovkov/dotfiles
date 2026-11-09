@@ -23,3 +23,4 @@ if [[ ! -z "$TMUX" ]]; then
     tmux rename-window " $(echo $* | cut -d . -f 1)"
     command ssh "$@"; tmux rename-window "$current_window_name"
   }
+fi
