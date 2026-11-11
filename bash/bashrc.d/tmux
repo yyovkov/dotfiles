@@ -19,8 +19,8 @@ fi
 # Set functions if TMUX is used
 if [[ ! -z "$TMUX" ]]; then
   ssh() {
-    # current_window_name=$(tmux display-message -p '#W')
-    tmux rename-window " $(echo $* | cut -d . -f 1)"
-    command ssh "$@"; tmux rename-window "$current_window_name"
+    current_window_name=$(tmux display-message -p '#W')
+    tmux rename-window "󰍹  $(echo $* | cut -d . -f 1)"
+    command ssh "$@" && tmux rename-window "$current_window_name"
   }
 fi
