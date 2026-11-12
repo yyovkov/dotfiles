@@ -1,5 +1,6 @@
 #===============================================================================
-# Setup direnv
+# Setup GO PATH
 #===============================================================================
-eval "$(direnv hook bash)"
-export DIRENV_LOG_FORMAT=
+export GOPATH=$HOME/.go
+
+pathmunge "${GOPATH}/bin" after

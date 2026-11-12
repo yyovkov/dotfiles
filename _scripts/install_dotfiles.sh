@@ -61,8 +61,8 @@ curl -sLo "${LOCAL_USER_LOCATION_BASHPROFILE}" "${GITHUB_REPO_URL}/${GITHUB_LOCA
 ################################################################################
 # Bash prompt
 ################################################################################
-GITHUB_LOCATION_BASHPROMPT="bash/bashrc.d/prompt"
-LOCAL_USER_LOCATION_BASHPROMPT=${HOME}/.bashrc.d/prompt
+GITHUB_LOCATION_BASHPROMPT="bash/bashrc.d/local/prompt"
+LOCAL_USER_LOCATION_BASHPROMPT=${HOME}/.bashrc.d/local/prompt
 
 _info "Create BASHPROMPT configuration directory"
 mkdir -p $(dirname "${LOCAL_USER_LOCATION_BASHPROMPT}")
@@ -73,8 +73,8 @@ curl -sLo "${LOCAL_USER_LOCATION_BASHPROMPT}" "${GITHUB_REPO_URL}/${GITHUB_LOCAT
 ################################################################################
 # Bash vim motion
 ################################################################################
-GITHUB_LOCATION_BASHVIMMOTION="bash/bashrc.d/vimmotion"
-LOCAL_USER_LOCATION_BASHVIMMOTION=${HOME}/.bashrc.d/vimmotion
+GITHUB_LOCATION_BASHVIMMOTION="bash/bashrc.d/local/vimmotion"
+LOCAL_USER_LOCATION_BASHVIMMOTION=${HOME}/.bashrc.d/local/vimmotion
 
 _info "Create BASHVIMMOTION configuration directory"
 mkdir -p $(dirname "${LOCAL_USER_LOCATION_BASHVIMMOTION}")
@@ -85,8 +85,8 @@ curl -sLo "${LOCAL_USER_LOCATION_BASHVIMMOTION}" "${GITHUB_REPO_URL}/${GITHUB_LO
 ################################################################################
 # Python
 ################################################################################
-GITHUB_LOCATION_PYTHON="bash/bashrc.d/python"
-LOCAL_USER_LOCATION_PYTHON=${HOME}/.bashrc.d/python
+GITHUB_LOCATION_PYTHON="bash/bashrc.d/local/python"
+LOCAL_USER_LOCATION_PYTHON=${HOME}/.bashrc.d/local/python
 
 _info "Create PYTHON configuration directory"
 mkdir -p $(dirname "${LOCAL_USER_LOCATION_PYTHON}")

@@ -14,3 +14,4 @@ alias vim=/opt/homebrew/bin/vim
 
 # Aliases for fastfetch command
 alias neofetch=/opt/homebrew/bin/fastfetch
+
