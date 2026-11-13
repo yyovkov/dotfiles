@@ -1,4 +1,11 @@
+#===============================================================================
+# Setup for Homebrew
+#===============================================================================
 export HOMEBREW_NO_AUTO_UPDATE=0
 export HOMEBREW_NO_ENV_HINTS=1
 
+# Setup bash completion
+export BASH_COMPLETION_USER_FILE=/opt/homebrew/etc/bash_completion.d/
+
+# Add homebrew to PAHT
 pathmunge /opt/homebrew/bin
