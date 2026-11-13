@@ -7,5 +7,13 @@ export HOMEBREW_NO_ENV_HINTS=1
 # Setup bash completion
 export BASH_COMPLETION_USER_FILE=/opt/homebrew/etc/bash_completion.d/
 
-# Add homebrew to PAHT
+# Enable bash completion
+BASH_COMPLETION="/opt/homebrew/etc/profile.d/bash_completion.sh"
+[ -f ${BASH_COMPLETION} ] && source ${BASH_COMPLETION}
+
+# Setup MANPATH
+export MANPATH=/opt/homebrew/share/man:${MANPATH}
+
+# Add homebrew to PATH
+PATH=${PATH//\:\/opt\/homebrew\/bin/}
 pathmunge /opt/homebrew/bin

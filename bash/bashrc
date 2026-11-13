@@ -2,7 +2,8 @@
 # Bash settings
 #===============================================================================
 # Disable bash completion dollar sign escape
-shopt -s direxpand no_empty_cmd_completion
+shopt -s no_empty_cmd_completion
+shopt -u direxpand
 
 # My Useful Aliases
 # set -o vi # This setting is moved to ~/.inputrc
@@ -13,11 +14,7 @@ export LC_CTYPE=${LTNAME}
 export LC_ALL=${LTNAME}
 export LC_COLLATE=${LTNAME}
 
-# Enable bash completion
-BASH_COMPLETION="/opt/homebrew/etc/profile.d/bash_completion.sh"
-[ -f ${BASH_COMPLETION} ] && source ${BASH_COMPLETION}
-
-export MANPATH=/opt/homebrew/share/man:/usr/share/man:/usr/local/share/man:/Applications/Ghostty.app/Contents/Resources/man
+export MANPATH=/usr/share/man:/usr/local/share/man
 
 #===============================================================================
 # Load additional bash files
@@ -31,3 +28,4 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 unset rc
+
